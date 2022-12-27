@@ -5,7 +5,7 @@ import Card from "./components/Card.js"
 
 const App = () => {
   const [pickedCard, setPickedCard] = useState([])
-  const [card, setCard] = useState([1,2,3,4,5,6,7,8,9,10])
+  const [card, setCard] = useState(["Q","R","S","A","V","T","E","N","P","J"])
   const [score, setScore] = useState(0)
   const [highScore, setHighScore] = useState(0)
 
