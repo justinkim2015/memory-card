@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'playertwo';
+  src: local('playertwo'), url(../assets/PressStart2P-Regular.ttf)
+}
+
 body {
   display: flex;
   align-items: center;
@@ -7,6 +12,7 @@ body {
 }
 
 #main {
+  font-family: playertwo;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,4 +21,5 @@ body {
   height: 95vh;
   width: 90vw;
   border-radius: 15px;
+  box-shadow: 5px 2px 9px rgb(128, 128, 128);
 }

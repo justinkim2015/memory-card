@@ -57,6 +57,7 @@ const App = () => {
     <div id="main">
       < Scoreboard score={score} highScore={highScore} />
       < Card card={card} clickCard={clickCard} />
+      <p>Don't click the same card!</p>
     </div>
   );
 }
