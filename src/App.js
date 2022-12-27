@@ -1,5 +1,5 @@
 import './styles/App.css';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Scoreboard from "./components/Scoreboard.js"
 import Card from "./components/Card.js"
 
@@ -17,7 +17,7 @@ const App = () => {
   }  
 
   const isGameOver = (card) => {
-    if(isSameCard(card) == true) {
+    if(isSameCard(card) === true) {
       isNewHighScore(score)
       setScore(0)
       setPickedCard([])
@@ -37,7 +37,22 @@ const App = () => {
       setHighScore(score)
     } 
   }
- 
+  
+  useEffect(() => {
+    let array = card
+    let currentIndex = array.length;
+    let randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+    
+    setCard(array)
+  })
+
   return (
     <div id="main">
       < Scoreboard score={score} highScore={highScore} />

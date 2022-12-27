@@ -1,7 +1,8 @@
 import '../styles/Card.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Card = (props) => {
+
   return (
     <div id="card-board">
       {props.card.map((card, index) => (
